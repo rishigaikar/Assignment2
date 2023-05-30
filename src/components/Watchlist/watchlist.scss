@@ -1,0 +1,69 @@
+.watchlistright {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+.header {
+  height: 50px;
+  // background-color: red;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+  align-content: center;
+  .rowflex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .bell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: purple;
+    padding: 7px;
+    border-radius: 20px;
+  }
+}
+.watchlistcard {
+  /* Your existing sidebar styles */
+  width: fit-content;
+  // height: 100vh;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  /* Add the following styles */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 35px 40px;
+}
+.stockcard {
+  width: 300px;
+  .innercardSection {
+    display: flex;
+    // flex-direction: row;
+    justify-content: space-between;
+
+    .rightSection {
+      .prices-percent {
+        .percent {
+          //   background-color: rgb(83, 100, 58);
+          padding: 4px 10px;
+          border-radius: 5px;
+          color: white;
+        }
+        .price {
+          //   color: rgb(138, 88, 32);
+          display: flex;
+          justify-content: end;
+        }
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .leftSection span {
+      font-weight: 500;
+    }
+  }
+}

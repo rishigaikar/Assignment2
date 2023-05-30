@@ -1,0 +1,56 @@
+.firstSidebar {
+  /* Your existing sidebar styles */
+  width: fit-content;
+  //   height: 50vh;
+  background-color: #fdfcf8;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  /* Add the following styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  opacity: 0.4;
+}
+
+.firstwatchlist {
+  /* Your existing watchlist styles */
+
+  ul {
+    /* Your existing ul styles */
+
+    /* Add the following styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+
+  li {
+    /* Your existing li styles */
+
+    /* Add the following styles */
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        color: #555;
+      }
+
+      &.selected {
+        color: blue;
+      }
+
+      &.selected:hover {
+        color: blue;
+      }
+    }
+  }
+}

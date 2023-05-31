@@ -13,24 +13,43 @@
     // width: fit-content;
     padding: 10px;
   }
+  .secondsection {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    .buysell {
+      flex: 1;
+    }
+    .volumn {
+      flex: 1;
+      // background-color: rebeccapurple;
+    }
+  }
 }
 .volumn {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   width: fit-content;
   padding: 10px;
-
+  width: 100%;
+  // height: 100%;
   .inner-volumn {
-    gap: 10px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 25vh;
+    // display: flex;
+    // flex-direction: column;
     margin-top: 10px;
     background-color: rgb(231, 231, 231);
-    padding: 15px 10px;
     border-radius: 10px;
-
+    // padding: 10px;
+    .outer {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
     .circuitmain {
+      // padding: 10px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -54,6 +73,7 @@
       gap: 30px;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
     }
 
     .close,
@@ -71,5 +91,24 @@
   }
   .tradenew {
     background-color: rebeccapurple;
+  }
+}
+.sectionthird {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  .volumn {
+    flex: 1;
+  }
+  .price-indicator {
+    padding: 0;
+    width: 100%;
+    // background-color: rebeccapurple;
+    .indicator {
+      padding: 20px;
+    }
+    .average-trade-price {
+      padding: 20px;
+    }
   }
 }

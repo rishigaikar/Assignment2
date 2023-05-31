@@ -1,16 +1,16 @@
-import React from "react";
-import Sidebar from "./components/Sidebar/Sidebar";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import Watchlist from "./components/Watchlist/Watchlist1";
-import "./components/firstSidebar.scss";
-import "./App.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import Sidebar from './components/Sidebar/Sidebar';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import Watchlist from './components/Watchlist/Watchlist1';
+import './components/firstSidebar.scss';
+import './App.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
   faUser,
   faGlasses,
   faBook,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
 const App: React.FC = () => {
   return (
@@ -18,27 +18,27 @@ const App: React.FC = () => {
       <div className="app">
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          <div className="firstSidebar" style={{ margin: "20px 0px" }}>
+          <div className="firstSidebar" style={{ margin: '20px 0px' }}>
             <div className="firstwatchlist">
               <ul>
                 <li>
                   <Link to="/watchlist1">
-                    <FontAwesomeIcon icon={faHouse} style={{ color: "grey" }} />
+                    <FontAwesomeIcon icon={faHouse} style={{ color: 'grey' }} />
                   </Link>
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faGlasses} style={{ color: "blue" }} />
+                  <FontAwesomeIcon icon={faGlasses} style={{ color: 'blue' }} />
                 </li>
                 <li>
-                  <FontAwesomeIcon icon={faBook} style={{ color: "grey" }} />
+                  <FontAwesomeIcon icon={faBook} style={{ color: 'grey' }} />
                 </li>
-                <li style={{ marginTop: "40px" }}>
-                  <FontAwesomeIcon icon={faUser} style={{ color: "grey" }} />
+                <li style={{ marginTop: '40px' }}>
+                  <FontAwesomeIcon icon={faUser} style={{ color: 'grey' }} />
                 </li>
               </ul>
             </div>

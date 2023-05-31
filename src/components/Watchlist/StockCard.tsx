@@ -1,7 +1,7 @@
-import React from "react";
-import "./watchlist.scss";
-import ReactApexChart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
+import React from 'react';
+import './watchlist.scss';
+import ReactApexChart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
 
 interface StockCardProps {
   data: {
@@ -16,9 +16,9 @@ const StockCard: React.FC<StockCardProps> = ({ data }) => {
   ////////// area chart data ////////
   const options: ApexOptions = {
     chart: {
-      id: "sparkline3",
-      group: "sparklines",
-      type: "area",
+      id: 'sparkline3',
+      group: 'sparklines',
+      type: 'area',
       height: 160,
       sparkline: {
         enabled: true,
@@ -26,21 +26,21 @@ const StockCard: React.FC<StockCardProps> = ({ data }) => {
     },
 
     stroke: {
-      curve: "smooth",
+      curve: 'smooth',
       width: 2,
     },
 
     tooltip: {
       enabled: false,
     },
-    colors: [data.type === "positive" ? "#98D7C2" : "#cc5801"],
+    colors: [data.type === 'positive' ? '#98D7C2' : '#cc5801'],
     fill: {
-      type: "gradient",
+      type: 'gradient',
       gradient: {
-        shade: "light",
-        type: "vertical",
+        shade: 'light',
+        type: 'vertical',
         shadeIntensity: 0.5,
-        gradientToColors: [data.type === "positive" ? "#98D7C2" : "#cc5801"],
+        gradientToColors: [data.type === 'positive' ? '#98D7C2' : '#cc5801'],
         inverseColors: false,
         opacityFrom: 0.7,
         opacityTo: 0.2,
@@ -51,14 +51,17 @@ const StockCard: React.FC<StockCardProps> = ({ data }) => {
 
   const chartData = [
     {
-      name: "Area",
-      type: "area",
-      data: [30, 40, 25, 50, 49, 21, 70, 51, 60, 100],
+      name: 'Area',
+      type: 'area',
+      data:
+        data.type === 'positive'
+          ? [30, 40, 25, 50, 49, 21, 70, 51, 60, 100]
+          : [30, 40, 25, 50, 49, 21, 70, 51, 60, 30],
       dataPoints: {
         marker: {
           size: 6,
-          fillColor: data.type === "positive" ? "#98D7C2" : "#cc5801",
-          strokeColor: data.type === "positive" ? "#98D7C2" : "#cc5801",
+          fillColor: data.type === 'positive' ? '#98D7C2' : '#cc5801',
+          strokeColor: data.type === 'positive' ? '#98D7C2' : '#cc5801',
           strokeWidth: 2,
         },
       },
@@ -66,7 +69,7 @@ const StockCard: React.FC<StockCardProps> = ({ data }) => {
   ];
   ////////// area chart data end////////
   return (
-    <div className="stockcard" style={{ paddingTop: "20px" }}>
+    <div className="stockcard" style={{ paddingTop: '20px' }}>
       <div className="innercardSection">
         <div className="leftSection">
           <div className="apexcard">
@@ -87,7 +90,7 @@ const StockCard: React.FC<StockCardProps> = ({ data }) => {
               className="percent"
               style={{
                 backgroundColor:
-                  data.type === "positive" ? "#98D7C2" : "#cc5801",
+                  data.type === 'positive' ? '#98D7C2' : '#cc5801',
               }}
             >
               {data.percent}
@@ -95,7 +98,7 @@ const StockCard: React.FC<StockCardProps> = ({ data }) => {
             <span
               className="price"
               style={{
-                color: data.type === "positive" ? "#98D7C2" : "#cc5801",
+                color: data.type === 'positive' ? '#98D7C2' : '#cc5801',
               }}
             >
               {data.price}

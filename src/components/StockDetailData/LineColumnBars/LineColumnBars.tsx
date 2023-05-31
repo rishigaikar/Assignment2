@@ -3,6 +3,34 @@ import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
 const options: ApexOptions = {
+  grid: {
+    show: false,
+  },
+  xaxis: {
+    labels: {
+      show: false,
+    },
+  },
+  yaxis: {
+    labels: {
+      show: false,
+    },
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    y: {
+      formatter: function (y: number) {
+        if (typeof y !== 'undefined') {
+          return y.toFixed(0) + ' points';
+        }
+        return y;
+      },
+    },
+  },
+  legend: {
+    show: false,
+  },
   series: [
     {
       name: 'TEAM A',

@@ -1,0 +1,12 @@
+.rowflex {
+  .header-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 7px;
+    background-color: rgb(247, 244, 244);
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+  }
+}

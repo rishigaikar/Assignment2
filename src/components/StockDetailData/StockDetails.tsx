@@ -1,10 +1,14 @@
-import React from "react";
-import "./stockDetails.scss";
+import React from 'react';
+import './stockDetails.scss';
+import LineColumnBars from './LineColumnBars/LineColumnBars';
 const StockDetails: React.FC = () => {
   return (
     <div className="stockDetails">
       <span className="commanfontcolor">INFOSYS LTD</span>
       <span className="commanfontcolor">INFY|NSE</span>
+      <div className="linecolumnbars">
+        <LineColumnBars></LineColumnBars>
+      </div>
       {/* ////////// volumn  ////////// */}
       <div className="volumn">
         <span className="commanfontcolor">Volumn</span>
@@ -58,22 +62,22 @@ const StockDetails: React.FC = () => {
       <div
         className="volumn tradenew"
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "40px",
-          gap: "10px",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '40px',
+          gap: '10px',
         }}
       >
-        <span style={{ color: "green" }}>Looks like a good time to trade</span>
-        <span style={{ color: "blue" }}>options</span>
+        <span style={{ color: 'green' }}>Looks like a good time to trade</span>
+        <span style={{ color: 'blue' }}>options</span>
         <span
           style={{
-            backgroundColor: "purple",
-            padding: "10px 80px",
-            borderRadius: "20px",
-            color: "white",
+            backgroundColor: '#C576F6',
+            padding: '10px 80px',
+            borderRadius: '20px',
+            color: 'white',
           }}
         >
           Trade

@@ -1,7 +1,7 @@
 .watchlistright {
   display: flex;
   gap: 10px;
-  width: 100%;
+  width: 100% !important;
   margin-top: 5px;
 }
 .header {
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: purple;
+    background-color: #c576f6;
     padding: 7px;
     border-radius: 20px;
   }
@@ -74,5 +74,37 @@
         width: fit-content;
       }
     }
+  }
+}
+
+////////////////responsive view //////////////
+@media screen and (max-width: 1053px) {
+  .watchlistright {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+
+    .watchlistcard,
+    .stockDetails {
+      // width: 100%;
+      // background-color: rebeccapurple;
+    }
+    .stockDetails {
+      // padding-right: 10px;
+    }
+  }
+}
+@media screen and (max-width: 1020px) {
+  .watchlistright {
+    // background-color: red;
+    .stockcard,
+    .stockDetails {
+      // margin-right: 30px;
+    }
+  }
+}
+@media screen and (min-width: 1058px) {
+  .stockDetails {
+    width: 100%;
   }
 }
